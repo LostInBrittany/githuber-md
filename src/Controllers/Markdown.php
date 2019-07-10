@@ -184,7 +184,7 @@ class Markdown extends ControllerAbstract {
 		} else {
 
 			// Markdown-per-post switcher.
-			if ( 'no' === $markdown_this_post ) {
+			if ( 'yes' !== $markdown_this_post ) {
 				$rich_editing = new RichEditing();
 				$rich_editing->enable();
 
@@ -229,7 +229,7 @@ class Markdown extends ControllerAbstract {
 		$post_id = githuber_get_current_post_id();
 		$markdown_this_post = get_metadata( 'post', $post_id, self::MD_POST_META_ENABLED, true );
 
-		if ( $markdown_this_post === 'no' ) {
+		if ( 'yes' !== $markdown_this_post ) {
 
 		} else {
 			wp_enqueue_script( 'editormd', $this->githuber_plugin_url . 'assets/vendor/editor.md/editormd.min.js', array( 'jquery' ), $this->editormd_varsion, true );

@@ -16,7 +16,7 @@ if ( ! isset( $markdown_this_post_choice ) ) {
 ?>
 <div class="submitbox">
 	<div class="misc-publishing-actions">
-		<?php if ( 'no' !== $markdown_this_post_choice ) : ?>
+		<?php if ( 'yes' === $markdown_this_post_choice ) : ?>
 		<div class="wpmd">
 			<input type="checkbox" name="markdown_this_post" id="markdown-switch" value="yes" checked /><label for="markdown-switch">Toggle</label>
 		</div>
